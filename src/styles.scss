@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./assets/styles/color";
+
+html,
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 24px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+  background-color: $grey-10;
+}
