@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@core/services/auth/auth.service';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+    userProfile!: HALA.UserProfile;
 
+    constructor(private authService: AuthService) {}
+
+    ngOnInit(): void {
+        this.authService.getUserProfile().subscribe((res) => {
+            this.userProfile = res;
+            console.log(this.userProfile);
+        });
+    }
 }
