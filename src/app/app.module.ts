@@ -7,6 +7,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { LoginService } from './pages/login/service/login.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from '@core/interceptors/auth.interceptor';
+import { LayoutModule } from '@layout/layout.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { AuthInterceptor } from '@core/interceptors/auth.interceptor';
             // or after 30 seconds (whichever comes first).
             registrationStrategy: 'registerWhenStable:30000',
         }),
+        LayoutModule,
     ],
     providers: [
         LoginService,
