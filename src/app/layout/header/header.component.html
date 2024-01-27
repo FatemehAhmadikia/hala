@@ -1,1 +1,17 @@
-<p>header works!</p>
+<header class="header">
+    <div class="header__list">
+        <div
+            class="btn btn-white header__notification"
+            [ngClass]="{ 'header__notification--active': hasNewNotification }"
+        >
+            <img
+                width="18"
+                height="18"
+                alt="notification"
+                src="./assets//images//icons/notification.svg"
+            />
+        </div>
+        <div class="header__user-info">user profile</div>
+        <div>language</div>
+    </div>
+</header>

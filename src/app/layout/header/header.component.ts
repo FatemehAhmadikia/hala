@@ -8,6 +8,7 @@ import { AuthService } from '@core/services/auth/auth.service';
 })
 export class HeaderComponent implements OnInit {
     userProfile!: HALA.UserProfile;
+    hasNewNotification: boolean = true;
 
     constructor(private authService: AuthService) {}
 

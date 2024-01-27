@@ -1,0 +1,21 @@
+@import './variables';
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: $radius;
+}
+
+.btn-lg {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-white {
+    @extend .btn;
+    background-color: $white;
+}
+
+.btn-secondary {
+    @extend .btn;
+    background-color: $secondary;
+}
