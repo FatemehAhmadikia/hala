@@ -15,7 +15,23 @@
     background-color: $white;
 }
 
+.btn-primary {
+}
+
 .btn-secondary {
     @extend .btn;
     background-color: $secondary;
+}
+
+.badge {
+    border-radius: 12px; //sm
+    border: 1px solid $gray-100;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    padding: 4px 12px;
+    line-height: 16.8px;
 }

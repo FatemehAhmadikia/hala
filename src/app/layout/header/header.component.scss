@@ -30,5 +30,26 @@
     }
     &__user-info {
         padding: 0 16px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        &__container {
+            display: flex;
+        }
+        &__name-container {
+            display: flex;
+            flex-direction: column;
+            padding: 0 16px 0 4px;
+        }
+        &__name {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22.4px;
+        }
+        &__role {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16.8px;
+        }
     }
 }

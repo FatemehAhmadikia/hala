@@ -11,7 +11,22 @@
                 src="./assets//images//icons/notification.svg"
             />
         </div>
-        <div class="header__user-info">user profile</div>
+        <div class="header__user-info" *ngIf="userProfile">
+            <span *ngIf="userProfile.level" class="badge header__user-info__level">
+                {{ userProfile.level }}
+            </span>
+            <div class="header__user-info__container">
+                <img src="./assets/images/avatar.png" width="40" height="40" alt="avatar" />
+                <div class="header__user-info__name-container">
+                    <span class="header__user-info__name" *ngIf="userProfile.fullName">
+                        {{ userProfile.fullName }}
+                    </span>
+                    <span *ngIf="userProfile.role" class="header__user-info__role">
+                        {{ userProfile.role }}
+                    </span>
+                </div>
+            </div>
+        </div>
         <div>language</div>
     </div>
 </header>
