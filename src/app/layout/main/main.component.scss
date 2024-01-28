@@ -1,2 +1,5 @@
-.app-main {
+@import './variables';
+
+.app-content {
+    padding: $headerHight 20px 0px $sidebarWidth;
 }

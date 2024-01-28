@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "./assets/styles/reset";
 @import "./assets/styles/variables";
 @import "./assets/styles/shared-classes";
+
 
 html,
 body {
@@ -13,4 +15,5 @@ body {
   overscroll-behavior-y: none;
   scroll-behavior: smooth;
   background-color: $gray-10;
+  color: $gray-100;
 }

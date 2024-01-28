@@ -11,4 +11,36 @@
         padding-bottom: 33px;
         border-bottom: 1px solid $gray-20;
     }
+    &__list {
+        height: calc(100% - 38px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        &__divider {
+            height: 1px;
+            background-color: $gray-20;
+            margin: 4px 0;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        line-height: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        height: 56px;
+        text-decoration: none;
+        color: $gray-100;
+        &:first-child {
+            margin-top: 16px;
+        }
+        &__btn {
+            margin-right: 12px;
+        }
+        &--active {
+            svg use {
+                fill: $white;
+            }
+        }
+    }
 }

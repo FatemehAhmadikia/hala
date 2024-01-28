@@ -2,6 +2,199 @@
     <div class="sidebar__logo">
         <img src="./assets/images/logo/logo.png" alt="HALA Logo" width="94" height="30" />
     </div>
-    sidebadr
+    <div class="sidebar__list">
+        <a
+            class="sidebar__link"
+            routerLink="/dashboard"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #dashboard="routerLinkActive"
+        >
+            <div
+                [ngClass]="dashboard.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use
+                        fill="#171717"
+                        xlink:href="/assets/images/icons/dashboard.svg#dashboardIcon"
+                    ></use>
+                </svg>
+            </div>
+            Dashboard
+        </a>
+        <a
+            class="sidebar__link"
+            routerLink="/cards-management"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #CardsManagement="routerLinkActive"
+        >
+            <div
+                [ngClass]="CardsManagement.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use fill="#171717" xlink:href="/assets/images/icons/cards.svg#cardsIcon"></use>
+                </svg>
+            </div>
+            Cards Management
+        </a>
+        <a
+            class="sidebar__link"
+            routerLink="/requests"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #requests="routerLinkActive"
+        >
+            <div
+                [ngClass]="requests.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use
+                        fill="#171717"
+                        xlink:href="/assets/images/icons/requests.svg#requestsIcon"
+                    ></use>
+                </svg>
+            </div>
+            Requests
+        </a>
+        <a
+            class="sidebar__link"
+            routerLink="/transactions"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #transactions="routerLinkActive"
+        >
+            <div
+                [ngClass]="requests.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use
+                        fill="#171717"
+                        xlink:href="/assets/images/icons/transactions.svg#transactionsIcon"
+                    ></use>
+                </svg>
+            </div>
+            Transactions
+        </a>
+        <div class="sidebar__list__divider"></div>
+        <a
+            class="sidebar__link"
+            routerLink="/sub-managers"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #subManagers="routerLinkActive"
+        >
+            <div
+                [ngClass]="subManagers.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use
+                        fill="#171717"
+                        xlink:href="/assets/images/icons/managers.svg#managersIcon"
+                    ></use>
+                </svg>
+            </div>
+            Sub Managers
+        </a>
+        <a
+            class="sidebar__link"
+            routerLink="/cards-plans"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #cardsPlans="routerLinkActive"
+        >
+            <div
+                [ngClass]="cardsPlans.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use fill="#171717" xlink:href="/assets/images/icons/cards.svg#cardsIcon"></use>
+                </svg>
+            </div>
+            Control Cards Plans
+        </a>
+        <a
+            class="sidebar__link"
+            routerLink="/invoices"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #invoices="routerLinkActive"
+        >
+            <div
+                [ngClass]="invoices.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use
+                        fill="#171717"
+                        xlink:href="/assets/images/icons/invoices.svg#invoiceIcon"
+                    ></use>
+                </svg>
+            </div>
+            Invoices
+        </a>
+        <a
+            class="sidebar__link"
+            routerLink="/faqs"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #FAQs="routerLinkActive"
+        >
+            <div
+                [ngClass]="FAQs.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use fill="#171717" xlink:href="/assets/images/icons/FAQs.svg#faqIcon"></use>
+                </svg>
+            </div>
+            FAQs
+        </a>
+        <a
+            class="sidebar__link"
+            routerLink="/privacy-policy"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #privacyPolicy="routerLinkActive"
+        >
+            <div
+                [ngClass]="privacyPolicy.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use
+                        fill="#171717"
+                        xlink:href="/assets/images/icons/privacy-policy.svg#privacyPolicyIcon"
+                    ></use>
+                </svg>
+            </div>
+            Privacy Policy
+        </a>
+        <a
+            class="sidebar__link"
+            routerLink="/terms-conditions"
+            routerLinkActive="sidebar__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            #termsConditions="routerLinkActive"
+        >
+            <div
+                [ngClass]="termsConditions.isActive ? 'btn-secondary' : 'btn-light'"
+                class="sidebar__link__btn"
+            >
+                <svg viewBox="0 0 18 18" width="18" height="18">
+                    <use
+                        fill="#171717"
+                        xlink:href="/assets/images/icons/conditions.svg#termsConditionsIcon"
+                    ></use>
+                </svg>
+            </div>
+            Terms & Conditions
+        </a>
+    </div>
 </nav>
 <app-chat></app-chat>

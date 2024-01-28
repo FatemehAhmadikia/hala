@@ -3,6 +3,11 @@
     width: 40px;
     height: 40px;
     border-radius: $radius;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .btn-lg {
@@ -13,6 +18,11 @@
 .btn-white {
     @extend .btn;
     background-color: $white;
+}
+
+.btn-light {
+    @extend .btn;
+    background-color: $gray-10;
 }
 
 .btn-primary {
