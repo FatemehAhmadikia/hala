@@ -12,8 +12,8 @@
             />
         </div>
         <div class="header__user-info" *ngIf="userProfile">
-            <span *ngIf="userProfile.level" class="badge header__user-info__level">
-                {{ userProfile.level }}
+            <span *ngIf="userProfile.cardsPlan" class="badge header__user-info__cards-plan">
+                {{ userProfile.cardsPlan }}
             </span>
             <div class="header__user-info__container">
                 <img src="./assets/images/avatar.png" width="40" height="40" alt="avatar" />

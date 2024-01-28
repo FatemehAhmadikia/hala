@@ -23,7 +23,7 @@ export class AuthService {
             role: 'Hala Payments Company',
             fullName: 'Esam Alnahdi',
             companyName: 'HALA',
-            level: 'Starter',
+            cardsPlan: 'Starter',
         });
     }
 }

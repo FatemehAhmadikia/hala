@@ -4,6 +4,6 @@ declare namespace HALA {
         role: string | null;
         fullName: string | null;
         companyName: string | null;
-        level: string | null;
+        cardsPlan: string | null;
     }
 }
