@@ -1,3 +1,36 @@
-.dashboard{
+@import './variables';
+
+.dashboard {
     padding: 0 16px;
+    width: 100%;
+    display: flex;
+    &__section-1 {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    &__section-2 {
+        width: 390px;
+    }
+    &__banner {
+        margin: 10px 0;
+        padding: 16px 18px;
+        background-color: $gray-100;
+        border-radius: $radius;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__title {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 21px;
+        }
+        &__content {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+    }
 }
