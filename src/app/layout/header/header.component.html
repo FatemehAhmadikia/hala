@@ -1,7 +1,7 @@
 <header class="header">
     <div class="header__list">
         <div
-            class="btn btn-white header__notification"
+            class="btn btn-md btn-white header__notification"
             [ngClass]="{ 'header__notification--active': hasNewNotification }"
         >
             <img
@@ -27,6 +27,6 @@
                 </div>
             </div>
         </div>
-        <div>language</div>
+        <language-selector></language-selector>
     </div>
 </header>

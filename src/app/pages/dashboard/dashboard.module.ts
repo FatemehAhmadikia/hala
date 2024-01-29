@@ -6,6 +6,7 @@ import { DashboardService } from './service/dashboard.service';
 import { CommonModule } from '@angular/common';
 import { TopCategoriesComponent } from './components/top-categories/top-categories.component';
 import { TopSpendingCardComponent } from './components/top-spending-card/top-spending-card.component';
+import { SpendingCardComponent } from './components/top-spending-card/components/spending-card/spending-card.component';
 
 @NgModule({
     declarations: [
@@ -13,6 +14,7 @@ import { TopSpendingCardComponent } from './components/top-spending-card/top-spe
         CardPanelComponent,
         TopCategoriesComponent,
         TopSpendingCardComponent,
+        SpendingCardComponent,
     ],
     imports: [DashboardRoutingModule, CommonModule],
     providers: [DashboardService],

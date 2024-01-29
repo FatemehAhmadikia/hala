@@ -1,13 +1,17 @@
 @import './variables';
 .btn {
-    width: 40px;
-    height: 40px;
     border-radius: $radius;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     vertical-align: middle;
+    border-color: transparent;
+}
+
+.btn-md {
+    width: 40px;
+    height: 40px;
 }
 
 .btn-lg {
@@ -26,6 +30,8 @@
 }
 
 .btn-primary {
+    @extend .btn;
+    background-image: linear-gradient(to right, $primary_1, $primary_2);
 }
 
 .btn-secondary {
