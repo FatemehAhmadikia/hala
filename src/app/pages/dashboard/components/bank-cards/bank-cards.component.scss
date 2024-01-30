@@ -1,9 +1,10 @@
 @import './variables';
 
-.top-spending-card {
-    padding: 16px 24px;
+.bank-cards {
+    padding: 16px 23px;
     background-color: $white;
     border-radius: $radius;
+    height: 100%;
     &__title {
         font-weight: 600;
         font-size: 20px;

@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card__content">
+        <div>
+            <h2 class="card__content__title">
+                {{ card.amount }}
+                <span class="card__content__title__sub">{{ card.currencyUnit }}</span>
+            </h2>
+            <p class="card__content__subtitle">Available Balance</p>
+        </div>
+        <img
+            class="card__content__setting"
+            src="./assets/images/icons/setting.svg"
+            width="20"
+            height="20"
+            alt="setting"
+        />
+    </div>
+    <div class="card__action" *ngFor="let item of card.actions">
+        <div class="btn-secondary btn-lg">
+            <img
+                [src]="'./assets/images/icons/' + item.logo + '.svg'"
+                width="20"
+                height="20"
+                alt="action icon"
+            />
+        </div>
+        <span class="card__action__name">{{ item.title }}</span>
+    </div>
+    <div class="card__info">
+        <div class="card__info__detail">
+            <img
+                [src]="'./assets/images/icons/' + card.bankLogoURL + '.svg'"
+                width="32"
+                height="32"
+                alt="bank logo"
+            />
+            <p class="card__info__number">{{ card.cardNumber }}</p>
+        </div>
+        <div class="btn-secondary btn-lg card__info__more-detail">...</div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+@import './variables';
+
+.card {
+    width: 343px;
+    padding: 8px 8px 8px 12px;
+    margin-bottom: 16px;
+    background-color: $white;
+    border: 1px solid $gray-10;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-left: 5px solid;
+    &__content {
+        &__title {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19px;
+            position: relative;
+            width: fit-content;
+            &__state {
+                position: absolute;
+                top: 5px;
+                right: -15px;
+                width: 8px;
+                height: 8px;
+                display: block;
+                border-radius: 50%;
+            }
+        }
+        &__subtitle,
+        &__state {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            display: block;
+            margin-top: 2px;
+        }
+        &__card-number {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 22px;
+            display: block;
+            margin-top: 20px;
+        }
+    }
+    &__detail {
+        &__date {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1px;
+            &__text,
+            &__time {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+                display: block;
+            }
+            &__time {
+                font-weight: 700;
+            }
+        }
+    }
+}

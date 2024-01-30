@@ -1,90 +1,10 @@
-<ng-container *ngIf="cards?.length === 2; else moreThanTwoCardTemplate">
-    <div>
-        <div class="card" *ngFor="let item of cards">
-            <div class="card__content">
-                <div>
-                    <h2 class="card__content__title">
-                        26,003.00
-                        <span class="card__content__title__sub">SAR</span>
-                    </h2>
-                    <p class="card__content__subtitle">Available Balance</p>
-                </div>
-                <img
-                    class="card__content__setting"
-                    src="./assets/images/icons/setting.svg"
-                    width="20"
-                    height="20"
-                    alt="setting"
-                />
-            </div>
-            <div class="card__action">
-                <div class="btn-secondary btn-lg">
-                    <img
-                        src="./assets/images/icons/transfer.svg"
-                        width="20"
-                        height="20"
-                        alt="Transfer"
-                    />
-                </div>
-                <span class="card__action__name">Transfer</span>
-            </div>
-            <div class="card__info">
-                <div class="card__info__detail">
-                    <img
-                        src="./assets/images/icons/brand.svg"
-                        width="32"
-                        height="32"
-                        alt="bank logo"
-                    />
-                    <p class="card__info__number">SA83 9000 .... 00474640</p>
-                </div>
-                <div class="btn-secondary btn-lg card__info__more-detail">...</div>
-            </div>
-        </div>
+<ng-container *ngIf="cards.length <= 2; else moreThanTwoCardTemplate">
+    <div class="cards-container">
+        <card *ngFor="let item of cards" [card]="item"></card>
     </div>
 </ng-container>
 <ng-template #moreThanTwoCardTemplate>
     <div>
-        <div class="card">
-            <div class="card__content">
-                <div>
-                    <h2 class="card__content__title">
-                        26,003.00
-                        <span class="card__content__title__sub">SAR</span>
-                    </h2>
-                    <p class="card__content__subtitle">Available Balance</p>
-                </div>
-                <img
-                    class="card__content__setting"
-                    src="./assets/images/icons/setting.svg"
-                    width="20"
-                    height="20"
-                    alt="setting"
-                />
-            </div>
-            <div class="card__action">
-                <div class="btn-secondary btn-lg">
-                    <img
-                        src="./assets/images/icons/transfer.svg"
-                        width="20"
-                        height="20"
-                        alt="Transfer"
-                    />
-                </div>
-                <span class="card__action__name">Transfer</span>
-            </div>
-            <div class="card__info">
-                <div class="card__info__detail">
-                    <img
-                        src="./assets/images/icons/brand.svg"
-                        width="32"
-                        height="32"
-                        alt="bank logo"
-                    />
-                    <p class="card__info__number">SA83 9000 .... 00474640</p>
-                </div>
-                <div class="btn-secondary btn-lg card__info__more-detail">...</div>
-            </div>
-        </div>
+        <card [card]="cards[cards.length - 1]"></card>
     </div>
 </ng-template>

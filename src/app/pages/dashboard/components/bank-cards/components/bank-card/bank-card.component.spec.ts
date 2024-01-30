@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopSpendingCardComponent } from './top-spending-card.component';
+import { BankCardComponent } from './bank-card.component';
 
-describe('TopSpendingCardComponent', () => {
-  let component: TopSpendingCardComponent;
-  let fixture: ComponentFixture<TopSpendingCardComponent>;
+describe('SpendingCardComponent', () => {
+  let component: BankCardComponent;
+  let fixture: ComponentFixture<BankCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TopSpendingCardComponent]
+      imports: [BankCardComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TopSpendingCardComponent);
+    fixture = TestBed.createComponent(BankCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

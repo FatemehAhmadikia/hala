@@ -1,7 +1,7 @@
 @import './variables';
 
 .dashboard {
-    padding: 0 16px;
+    padding: 0 16px 20px 16px;
     width: 100%;
     display: flex;
     &__section-1 {
@@ -11,6 +11,7 @@
     }
     &__section-2 {
         width: 390px;
+        height: calc(100vh - ($headerHight + 20px));
     }
     &__banner {
         margin: 10px 0;
