@@ -1,1 +1,32 @@
-<p>top-categories works!</p>
+<div class="categories">
+    <h2 class="categories__title">Top Spending Categories</h2>
+    <div class="categories__chart__icons">
+        <img
+            class="categories__chart__icons--right"
+            src="./assets/images/icons/arrow.svg"
+            width="20"
+            height="20"
+            alt="arrow"
+        />
+        <img
+            class="categories__chart__icons--left"
+            src="./assets/images/icons/arrow.svg"
+            width="20"
+            height="20"
+            alt="arrow"
+        />
+    </div>
+    <div class="categories__chart-container">
+        <div
+            [ngClass]="{ 'categories__chart__month--selected': selectedMonth === item }"
+            class="categories__chart__month"
+            *ngFor="let item of months"
+        >
+            {{ item }}
+        </div>
+    </div>
+    <ng-container [ngSwitch]="selectedMonth">
+        <div *ngSwitchCase="Months.January">January</div>
+        <div *ngSwitchCase="Months.May">May</div>
+    </ng-container>
+</div>
