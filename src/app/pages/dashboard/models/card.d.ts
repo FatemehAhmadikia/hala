@@ -10,4 +10,11 @@ declare namespace Card {
         title: string;
         logo: string;
     }
+    interface BankInfo {
+        department: string;
+        cardNumber: string;
+        amount: string;
+        currencyUnit: string;
+        expiredDate: string | Date;
+    }
 }
