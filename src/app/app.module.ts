@@ -8,6 +8,8 @@ import { LoginService } from './pages/login/service/login.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from '@core/interceptors/auth.interceptor';
 import { LayoutModule } from '@layout/layout.module';
+import { AppInterceptor } from '@core/interceptors/app.interceptor';
+import { ErrorInterceptor } from '@core/interceptors/error.interceptor';
 
 @NgModule({
     declarations: [AppComponent],
@@ -25,6 +27,8 @@ import { LayoutModule } from '@layout/layout.module';
     providers: [
         LoginService,
         { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     ],
     bootstrap: [AppComponent],
 })
