@@ -9,13 +9,17 @@ const routes: Routes = [
     {
         path: '',
         component: MainComponent,
-        canActivate: [],
+        canActivate: [AuthGuard],
         children: [
             {
                 path: 'dashboard',
-                canActivate: [AuthGuard],
                 loadChildren: () =>
                     import('../pages/dashboard/dashboard.module').then((m) => m.DashboardModule),
+            },
+            {
+                path: 'cards-management',
+                loadComponent: () =>
+                    import('../pages/cards-management/cards-management.component').then((m) => m.CardsManagementComponent),
             },
             {
                 path: '',
